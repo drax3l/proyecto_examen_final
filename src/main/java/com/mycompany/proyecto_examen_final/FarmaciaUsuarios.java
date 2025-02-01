@@ -10,10 +10,8 @@ package com.mycompany.proyecto_examen_final;
  * @author usuario
  */
 public class FarmaciaUsuarios extends javax.swing.JFrame {
-
-
-    // Declaración de variables a nivel de clase
-    private String[] usuarios = new String[5];
+    
+    private final String[] usuarios = new String[5];
     private int contador = 0;
 
     /**
@@ -174,10 +172,8 @@ public class FarmaciaUsuarios extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-// Obtén la opción seleccionada en el JComboBox
+
     String seleccion = (String) jComboBox1.getSelectedItem();
-    
-    // Puedes hacer algo en base a la selección, por ejemplo:
     System.out.println("Opción seleccionada: " + seleccion);
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
@@ -209,10 +205,8 @@ public class FarmaciaUsuarios extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new FarmaciaUsuarios().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new FarmaciaUsuarios().setVisible(true);
         });
     }
 
